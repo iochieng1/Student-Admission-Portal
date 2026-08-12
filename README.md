@@ -2,79 +2,96 @@
 
 ## Overview
 
-This project is a basic school admission form built using HTML. It allows users to enter student and parent information and submit the form.
+The **Gifted Hearts High School Admission Portal** is a simple HTML5 project designed to collect student admission information. The webpage allows users to enter student details, parent information, and submit an admission application through a structured form.
 
-The goal of this project is to practice core HTML elements such as forms, fieldsets, labels, inputs, buttons, and semantic page structure.
+This project demonstrates the use of semantic HTML, form elements, fieldsets, labels, validation, placeholders, and accessibility best practices.
 
 ---
 
-## HTML Elements Used
+# Features
 
-### 1. `<!DOCTYPE html>`
+* Semantic HTML5 structure
+* Student information section
+* Parent information section
+* Form validation using `required`
+* Date picker for Date of Birth
+* Placeholder text for user guidance
+* Mobile-friendly viewport configuration
+* Accessible labels linked to inputs
+* Professional page layout with header and footer
 
-Defines the document as an HTML5 document.
+---
+
+# HTML Elements Used
+
+## 1. `<!DOCTYPE html>`
+
+Declares the document as an HTML5 webpage.
 
 ```html
 <!DOCTYPE html>
 ```
 
+### Purpose
+
+* Ensures the browser renders the page using HTML5 standards.
+
 ---
 
-### 2. `<html>`
+## 2. `<html>`
 
-The root element that contains the entire webpage.
+Root element of the webpage.
 
 ```html
 <html lang="en">
 ```
 
-* `lang="en"` specifies that the page content is in English.
+### Purpose
+
+* Contains all webpage content.
+* Specifies English as the document language.
 
 ---
 
-### 3. `<head>`
+## 3. `<head>`
 
-Contains metadata and information about the webpage.
+Stores metadata and page configuration.
 
 ```html
 <head>
 ```
 
-Inside the head section:
+### Elements Included
 
-#### `<meta>`
-
-Defines character encoding.
+#### Character Encoding
 
 ```html
 <meta charset="UTF-8">
 ```
 
-**Note:** In the original code there is a typo:
+Ensures proper display of text and special characters.
+
+#### Viewport
 
 ```html
-<metacharset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-Correct version:
+Improves responsiveness on mobile devices.
+
+#### Title
 
 ```html
-<meta charset="UTF-8">
+<title>Gifted Hearts High School Admission Portal</title>
 ```
 
-#### `<title>`
-
-Sets the page title shown in the browser tab.
-
-```html
-<title>Gifted Hearts High School</title>
-```
+Appears in the browser tab.
 
 ---
 
-### 4. `<body>`
+## 4. `<body>`
 
-Contains all visible content displayed on the webpage.
+Contains all visible content displayed to users.
 
 ```html
 <body>
@@ -82,245 +99,332 @@ Contains all visible content displayed on the webpage.
 
 ---
 
-### 5. `<h1>`
+## 5. `<header>`
 
-Main heading of the page.
+Introduces the webpage.
 
 ```html
-<h1>School Admission Portal</h1>
+<header>
+    <h1>Gifted Hearts High School</h1>
+    <p>School Admission Portal</p>
+</header>
 ```
 
-Purpose:
+### Purpose
 
-* Displays the primary title.
-* Improves accessibility and page structure.
+* Displays the school name.
+* Provides context for visitors.
 
 ---
 
-### 6. `<main>`
+## 6. Headings (`<h1>`)
 
-Represents the main content area of the webpage.
+Main heading of the webpage.
+
+```html
+<h1>Gifted Hearts High School</h1>
+```
+
+### Purpose
+
+* Identifies the webpage.
+* Improves accessibility and SEO.
+
+---
+
+## 7. `<main>`
+
+Contains the primary content of the webpage.
 
 ```html
 <main>
 ```
 
-Purpose:
+### Purpose
 
-* Helps search engines and screen readers identify the primary content.
-
----
-
-### 7. `<form>`
-
-Creates a form for collecting user input.
-
-```html
-<form>
-```
-
-Purpose:
-
-* Groups all form controls together.
-* Allows data submission.
-
-**Note:** There is an extra `s` after the opening tag in the original code:
-
-```html
-<form>s
-```
-
-It should be:
-
-```html
-<form>
-```
+* Helps screen readers identify the main content area.
+* Organizes page structure.
 
 ---
 
-### 8. `<fieldset>`
+## 8. `<form>`
 
-Groups related form elements together.
+Creates the admission application form.
+
+```html
+<form action="#" method="post">
+```
+
+### Purpose
+
+* Collects user information.
+* Defines how form data is submitted.
+
+---
+
+## 9. `<fieldset>`
+
+Groups related form controls together.
+
+### Student Information
 
 ```html
 <fieldset>
 ```
 
-Used twice:
+### Parent Information
 
-* Student Information
-* Parent Information
+```html
+<fieldset>
+```
 
-Purpose:
+### Purpose
 
 * Organizes form sections.
-* Improves readability.
+* Improves readability and accessibility.
 
 ---
 
-### 9. `<legend>`
+## 10. `<legend>`
 
-Provides a title for a fieldset.
+Provides a title for each fieldset.
+
+Examples:
 
 ```html
 <legend>Student Information</legend>
 ```
 
-Examples:
+```html
+<legend>Parent Information</legend>
+```
 
-* Student Information
-* Parent Information
+### Purpose
+
+* Identifies grouped form controls.
 
 ---
 
-### 10. `<label>`
+## 11. `<label>`
 
-Describes an input field.
+Associates descriptive text with input fields.
+
+Examples:
 
 ```html
-<label>Full Name</label>
+<label for="fullname">Full Name</label>
 ```
 
-Purpose:
+```html
+<label for="phone">Phone Number</label>
+```
 
-* Helps users understand what information is required.
+### Purpose
+
 * Improves accessibility.
+* Helps users understand required information.
 
 ---
 
-### 11. `<input>`
+## 12. `<input>`
 
-Accepts user input.
+Accepts user information.
 
-Examples:
-
-Text input:
+### Full Name
 
 ```html
-<input type="text">
+<input
+    type="text"
+    id="fullname"
+    name="fullname"
+    placeholder="Enter student's full name"
+    required
+>
 ```
 
-Telephone input:
+### Admission Number
 
 ```html
-<input type="tel">
+<input
+    type="text"
+    id="admission-number"
+    name="admission-number"
+    required
+>
 ```
 
-Input fields used:
+### Date of Birth
 
-| Field            | Type |
-| ---------------- | ---- |
-| Full Name        | text |
-| Admission Number | text |
-| Date of Birth    | text |
-| Parent Name      | text |
-| Phone Number     | tel  |
+```html
+<input
+    type="date"
+    id="dob"
+    name="dob"
+    required
+>
+```
+
+### Parent Name
+
+```html
+<input
+    type="text"
+    id="parent-name"
+    name="parent-name"
+    required
+>
+```
+
+### Phone Number
+
+```html
+<input
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="e.g. 0712345678"
+    required
+>
+```
+
+### Purpose
+
+* Collects user data.
+* Provides built-in validation.
+* Offers a date picker for birth dates.
 
 ---
 
-### 12. `<button>`
+## 13. `<button>`
 
-Creates a clickable button.
+Creates a clickable form submission button.
 
 ```html
 <button type="submit">
-    Submit
+    Submit Application
 </button>
 ```
 
-Purpose:
+### Purpose
 
-* Sends form data when clicked.
+* Submits the admission application form.
 
 ---
 
-### 13. `<footer>`
+## 14. `<footer>`
 
-Represents the footer section of the webpage.
+Represents the footer section.
 
 ```html
 <footer>
 ```
 
-Purpose:
-
-* Displays information at the bottom of the page.
-
----
-
-### 14. `<p>`
-
-Defines a paragraph.
+Example:
 
 ```html
-<p>School Portal</p>
+<p>&copy; 2026 Gifted Hearts High School. All Rights Reserved.</p>
 ```
 
-Purpose:
+### Purpose
 
-* Displays footer text.
+* Displays copyright information.
+* Appears at the bottom of the page.
 
 ---
 
-## Page Structure
+## 15. `<p>`
+
+Defines paragraphs used throughout the page.
+
+Examples:
+
+```html
+<p>School Admission Portal</p>
+```
+
+```html
+<p>&copy; 2026 Gifted Hearts High School. All Rights Reserved.</p>
+```
+
+### Purpose
+
+* Displays supporting information and footer content.
+
+---
+
+# Website Structure
 
 ```text
 HTML
 │
 ├── Head
-│   ├── Meta
+│   ├── Meta Charset
+│   ├── Viewport Meta
 │   └── Title
 │
 └── Body
-    ├── H1 Heading
+    ├── Header
+    │   ├── H1
+    │   └── Intro Paragraph
+    │
     ├── Main
     │   └── Form
-    │       ├── Fieldset (Student Information)
-    │       ├── Fieldset (Parent Information)
+    │       ├── Fieldset
+    │       │   ├── Legend (Student Information)
+    │       │   ├── Labels
+    │       │   └── Inputs
+    │       │
+    │       ├── Fieldset
+    │       │   ├── Legend (Parent Information)
+    │       │   ├── Labels
+    │       │   └── Inputs
+    │       │
     │       └── Submit Button
     │
     └── Footer
-        └── Paragraph
+        └── Copyright Paragraph
 ```
 
 ---
 
-## Improvements To Make
+# Accessibility Improvements
 
-1. Use proper labels linked to inputs with `for` and `id`.
-2. Change Date of Birth input to:
+This version includes several accessibility enhancements:
 
-```html
-<input type="date">
-```
-
-3. Add placeholder text.
-
-```html
-<input type="text" placeholder="Enter Full Name">
-```
-
-4. Add required validation.
-
-```html
-<input type="text" required>
-```
-
-5. Add CSS styling to improve appearance.
+* Labels linked to inputs using `for` and `id`.
+* Semantic elements such as `header`, `main`, and `footer`.
+* Required field validation.
+* Placeholder text for user guidance.
+* Proper input types (`date`, `tel`, `text`).
+* Structured fieldsets and legends.
 
 ---
 
-## Learning Outcomes
+# Future Enhancements
 
-After completing this project, you should understand:
+Potential improvements include:
 
-* Basic HTML document structure
+* Add CSS styling.
+* Create a navigation menu.
+* Add email address field.
+* Add gender selection using radio buttons.
+* Add file upload for student documents.
+* Connect the form to a backend database.
+* Display a success message after submission.
+
+---
+
+# Learning Outcomes
+
+By completing this project, you will gain experience with:
+
+* HTML5 document structure
 * Semantic HTML elements
-* Form creation
-* Input fields
-* Buttons
+* Form creation and validation
+* Labels and accessibility
 * Fieldsets and legends
-* Footer usage
-* Accessibility basics
+* Input types and placeholders
+* Headers and footers
+* Building a real-world admission form
 
-This project is an excellent beginner exercise for learning HTML forms and page structure.
+This project provides a practical introduction to creating accessible and well-structured forms using HTML.
