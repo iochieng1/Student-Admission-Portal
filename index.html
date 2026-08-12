@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-    <title>Gifted Hearts High School</title>
-    </head>
-    <body>
-        <h1>School Admission Portal</h1>
-        <main>
-            <form>
-                <fieldset>
-                    
-                    <legend>Student Information</legend>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifted Hearts High School Admission Portal</title>
+</head>
 
-                    <label>Full Name</label>
-                    <input type="text">
+<body>
+    <header>
+        <h1>Gifted Hearts High School</h1>
+        <p>School Admission Portal</p>
+    </header>
 
-                    <label>Admission Number</label>
-                    <input type="text">
+    <main>
+        <form action="#" method="post">
 
-                    <label>Date of Birth</label>
-                    <input type="text">
-                </fieldset>
-                
-                <fieldset>
-                   
-                    <legend>Parent Informtion</legend>
+            <fieldset>
+                <legend>Student Information</legend>
 
-                    <label>Parent Name</label>
-                    <input type="text">
+                <label for="fullname">Full Name</label><br>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter student's full name"
+                    required
+                >
+                <br><br>
 
-                    <label>Phone Number</label>
-                    <input type="tel">
-                </fieldset>
-                <button type="submit">
-                    Submit
-                </button>
-            </form>
-        </main>
+                <label for="admission-number">Admission Number</label><br>
+                <input
+                    type="text"
+                    id="admission-number"
+                    name="admission-number"
+                    placeholder="Enter admission number"
+                    required
+                >
+                <br><br>
 
-        <footer>
-            <p>
-                School Portal</p>
-        </footer>
-    </body>
+                <label for="dob">Date of Birth</label><br>
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required
+                >
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Parent Information</legend>
+
+                <label for="parent-name">Parent Name</label><br>
+                <input
+                    type="text"
+                    id="parent-name"
+                    name="parent-name"
+                    placeholder="Enter parent's full name"
+                    required
+                >
+                <br><br>
+
+                <label for="phone">Phone Number</label><br>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="e.g. 0712345678"
+                    required
+                >
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Submit Application</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gifted Hearts High School. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
